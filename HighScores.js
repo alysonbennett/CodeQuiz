@@ -1,0 +1,1 @@
+// This code will take the users intials and high scores and display them in the HighScores.html
