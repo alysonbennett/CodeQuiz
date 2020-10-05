@@ -3,5 +3,4 @@
 ## Alyson Bennett
 
 ## Code Quiz Homework Objectives
-aldhnflknasdkfln
 

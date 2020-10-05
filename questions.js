@@ -1,6 +1,6 @@
 // This code will walk the user through the questions and display their score at the end
 
-// Declare questions in a variable
+// Declare variables
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -29,24 +29,43 @@ var questions = [
     },
 ];
 
-//Declare remaining variables
-
-var score = 0;
-var score =
-var timer = 60;
+var score;
+var timeLeft = 75;
+var timer;
 var penalty = 10;
+var countdownClock = document.querySelector("#CountdownClock")
+var quizBody = document.querySelector("#quizBody");
+var choicesList = document.createElement("choicesUL")
 
 // When the user clicks the "Start Quiz" button, start timer at 75 seconds that is displayed at the top right of the screen
 
-$(document).ready(function() {
+countdownClock.addEventListener("click", function() {
 
-    $("#startQuiz").on("click", function() {
+       var timerInterval = setInterval(function() {
+           secondsLeft--;
+           countdownClock.textContent = secondsLeft
 
-    });
+           if(secondsLeft === 0) {
+               clearInterval(timerInterval);
+               endGame();
+           }
+       }, 1000);
+
+       startQuestions();
 
 });
 
-// Display the first question
+// Display quiz questions
+
+function startQuestions () {
+    // Clear content on index.html
+    quizBody.innerHTML = "";
+    choicesList.innerHTML = "";
+    // For loop to go through questions array
+    for (var i = 0; i < questions.length; i++) {
+        
+    }
+}
 
 // If user selects the right answer, show comment "Correct!" and move onto next question
 
