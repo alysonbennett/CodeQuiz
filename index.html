@@ -23,14 +23,14 @@
         <button><a href="HighScores.html">View High Scores</a></button>
       </div>
       <div class="right">
-        <h4>Time Left: <span id="CountdownClock">0</span></h4>
+        <h4>Time Left: <span id="CountdownClock">75</span></h4>
       </div>
     </div>
 
-    <div id="quizBody">
+    <div id="startBody">
       <h2>Coding Quiz Challenge</h2>
       <p>
-        Welcome to the coding quiz challenge! This quiz will ask you 5 basic
+        Welcome to the coding quiz challenge! This quiz will ask you five basic
         coding questions. At the end, you will be able to view your score and
         add your initials to the High Score list. Beware! Ten seconds will be
         removed from the timer for every wrong answer. Click below to get
@@ -38,9 +38,24 @@
       </p>
       <div>
         <button id="startQuiz">Start Quiz</button>
-        <ul id="choicesUL"></ul>
       </div>
     </div>
-    <script src ="questions.js"></script>
+
+    <div id="quizBody" class="hide"></div>
+
+    <div id="scoreBody" class="hide">
+      <h1>All Done!</h1>
+      <p>Your final score is: <span id="scoreEl"></span></p>
+
+      <input type="text" id="initialsInp" />
+      <button id="addInit" class="btn">Submit</button>
+
+      <ol id="highscores"></ol>
+    </div>
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+    <script src="./Timer.js"></script>
+    <script src="./HighScores.js"></script>
   </body>
 </html>
