@@ -9,6 +9,7 @@ var penalty = 10;
 startQuiz.addEventListener("click", function () {
     startBody.classList.add('hide')
     quizBody.classList.remove('hide')
+    initialsInp.classList.remove("hide")
 
     Timer();
     startQuestions();
@@ -23,6 +24,7 @@ function startQuestions() {
     questionEl.textContent = questions[index].title;
 
     quizBody.appendChild(questionEl);
+
 
     // For loop to go through questions array
     for (var i = 0; i < questions[index].choices.length; i++) {
@@ -40,9 +42,11 @@ function startQuestions() {
 function check() {
     var selected = this.textContent;
     var correct = questions[index].answer
+    // var feedbackEl = document.createElement('div');
 
     if (selected === correct) {
         score++;
+        // feedbackEl.textContent = "Correct!"
     } else {
         timeLeft -= penalty
     }
@@ -51,7 +55,8 @@ function check() {
     if (index < questions.length) {
         startQuestions();
     } else {
-        endGame()
+        endGame();
+        saveHighScores();
     }
 }
 
@@ -64,3 +69,24 @@ function endGame() {
 
     scoreEl.textContent = timeLeft;
 }
+
+function saveHighScores () {
+    var initials = document.querySelector("#initialsInp".value.trim());
+
+    if (initials !== "") {
+        var highscores =
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
+        console.log(highscores)
+        var newScore = {
+            "score": timeLeft,
+            "initials": initials
+        };
+
+        highscores.push(newScore);
+        window.localStorage.setItem ("highscores", JSON.stringify(highscores));
+        window.location.href = "HighScores.html";
+    }
+}
+
+
+

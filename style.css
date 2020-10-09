@@ -23,7 +23,7 @@ h1 {
     border-radius: 8px;
 } */
 
-#quizBody {
+#startBody {
     text-align: center;
     padding-top: 100px;
 }
@@ -35,6 +35,31 @@ p {
     padding-bottom: 20px;
 }
 
+#quizBody {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#scoreBody {
+    text-align: center;
+    padding-top: 100px;
+}
+
 .hide {
     display: none;
+}
+
+.btn {
+    background-color: salmon;
+    margin: 20px;
+    color: white;
+}
+
+a.btn.hover {
+    color: lemonchiffon;
+}
+
+#feedback {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
 }

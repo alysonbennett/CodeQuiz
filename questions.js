@@ -1,4 +1,4 @@
-// Declare variables
+// Declare qustions for app.js to pull from
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -17,7 +17,7 @@ var questions = [
     },
     {
         title: "String vales must be enclosed within ___ when being assigned to variables.",
-        choices: ["commas", "curly brackets", "quotes", "parenteses"],
+        choices: ["commas", "curly brackets", "quotes", "parentheses"],
         answer: "quotes",
     },
     {
