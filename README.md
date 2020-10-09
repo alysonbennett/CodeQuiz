@@ -18,13 +18,13 @@ To begin this assignment, I pseudo-coded each step of the code. This started wit
 
 ## Screen Shots of Code Quiz
 
-![Landing Page](./ScreenShots.landingPage.png)
+![Landing Page](./ScreenShots/landingPage.png)
 
-![Questions](./ScreenShots.questions.png)
+![Questions](ScreenShots/questions.png)
 
-![All Done Screen](./ScreenShots.allDone.png)
+![All Done Screen](./ScreenShots/allDone.png)
 
-![All Done with Scores](./ScreenShots.allDoneWithScores.png)
+![All Done with Scores](./ScreenShots/allDoneWithScores.png)
 
 ## Final Thoughts and Issues
 
