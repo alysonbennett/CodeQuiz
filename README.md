@@ -18,8 +18,18 @@ To begin this assignment, I pseudo-coded each step of the code. This started wit
 
 ## Screen Shots of Code Quiz
 
-!! Insert screen shots of whatever you end up with !!
+![Landing Page](./ScreenShots.landingPage.png)
 
-## Final Thoughts
+![Questions](./ScreenShots.questions.png)
+
+![All Done Screen](./ScreenShots.allDone.png)
+
+![All Done with Scores](./ScreenShots.allDoneWithScores.png)
+
+## Final Thoughts and Issues
 
 This homework assignment was much harder than any I had done before, and way more difficult than I had anticipated. I received help from my tutor, TA's, and fellow students in study groups. On top of that, there were hours of googling, trial and error, undoing, pulling previous working GitHub files, and contemplation.
+
+I'm still having issues with storing the scores and initials to the high scores, as well as displaying the feedback comments. I'm still working to figure out these problems, but I feel that I have learned a lot with this assignment.
+
+Thank you. 
