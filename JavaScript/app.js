@@ -75,18 +75,26 @@ function saveHighScores () {
 
     if (initials !== "") {
         var highscores =
-        JSON.parse(window.localStorage.getItem("highscores")) || [];
+        JSON.parse(window.localStorage.getItem("#highscores")) || [];
         console.log(highscores)
         var newScore = {
             "score": timeLeft,
             "initials": initials
         };
 
-        highscores.push(newScore);
-        window.localStorage.setItem ("highscores", JSON.stringify(highscores));
+        
+            highscores.push(newScore);
+        window.localStorage.setItem ("#highscores", JSON.stringify(highscores));
         window.location.href = "HighScores.html";
+        
     }
 }
 
+// Function to clear the high scores when the "Clear High Scores" button is clicked
+function clearSpan(){
+    document.querySelector("#highscores").innerHTML=""
+}
 
-
+clearHighScores.addEventListener("click", function() {
+    clearSpan();
+})
