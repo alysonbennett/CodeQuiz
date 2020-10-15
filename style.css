@@ -62,4 +62,5 @@ a.btn.hover {
 #feedback {
     margin-top: 20px;
     border-top: 1px solid lightgray;
+    text-align: center;
 }

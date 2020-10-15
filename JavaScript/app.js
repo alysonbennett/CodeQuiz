@@ -4,12 +4,13 @@ var index = 0;
 var timeLeft = 75;
 var timer;
 var penalty = 10;
-// When the user clicks the "Start Quiz" button, start timer at 75 seconds that is displayed at the top right of the screen
 
+// When the user clicks the "Start Quiz" button, start timer at 75 seconds that is displayed at the top right of the screen
 startQuiz.addEventListener("click", function () {
     startBody.classList.add('hide')
     quizBody.classList.remove('hide')
     initialsInp.classList.remove("hide")
+    feedback.classList.remove('hide')
 
     Timer();
     startQuestions();
@@ -39,17 +40,24 @@ function startQuestions() {
     }
 }
 
+// Check if the what the user selected is correct or wrong, and show feedback below question
 function check() {
     var selected = this.textContent;
     var correct = questions[index].answer
-    // var feedbackEl = document.createElement('div');
+    var feedbackEl = document.querySelector("#feedback");
 
     if (selected === correct) {
         score++;
-        // feedbackEl.textContent = "Correct!"
+        feedbackEl.textContent = "Correct!";
     } else {
         timeLeft -= penalty
+        feedbackEl.textContent = "Wrong";
     }
+
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function() {
+        feedbackEl.setAttribute("class", "feedback hide");
+    }, 1000);
 
     index++;
     if (index < questions.length) {
@@ -66,6 +74,7 @@ function endGame() {
 
     quizBody.classList.add('hide');
     scoreBody.classList.remove('hide')
+    feedback.classList.add('hide')
 
     scoreEl.textContent = timeLeft;
 }
