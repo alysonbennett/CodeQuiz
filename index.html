@@ -42,24 +42,26 @@
     </div>
 
     <div id="quizBody" class="hide"></div>
-    <div id = "feedback" class = "hide"></div>
+    <div id="feedback" class="hide"></div>
+
     <div id="scoreBody" class="hide">
       <h1>All Done!</h1>
       <p>Your final score is: <span id="scoreEl"></span></p>
-      <p>Enter your intials: 
+      <p>
+        Enter your intials:
 
-      <input type="text" id="initialsInp" class="hide"/>
-      <button id="addInit" class="btn">Submit</button>
-      <span id="highscores"></span>
+        <input type="text" id="initialsInp" />
+        <button id="addInit" class="btn">Submit</button>
+        <span id="highscores"></span>
       </p>
 
       <button id="goBack"><a href="index.html">Go Back</a></button>
       <button id="clearHighScores">Clear High Scores</button>
     </div>
 
+    <script src="./JavaScript/storage.js"></script>
     <script src="./JavaScript/questions.js"></script>
     <script src=".//JavaScript/app.js"></script>
     <script src="./JavaScript/Timer.js"></script>
-    <script src="./JavaScript/HighScores.js"></script>
   </body>
 </html>

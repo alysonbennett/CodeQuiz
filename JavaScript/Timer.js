@@ -3,7 +3,7 @@ function Timer() {
         timeLeft--;
         CountdownClock.textContent = timeLeft;
 
-        if (timeLeft === 0) {
+        if (!timeLeft) {
             endGame();
         }
     }, 1000);

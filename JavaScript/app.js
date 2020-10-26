@@ -6,15 +6,18 @@ var timer;
 var penalty = 10;
 
 // When the user clicks the "Start Quiz" button, start timer at 75 seconds that is displayed at the top right of the screen
-startQuiz.addEventListener("click", function () {
+startQuiz.addEventListener("click", init);
+clearHighScores.addEventListener("click", clearSpan);
+addInit.addEventListener("click", saveHighScores)
+
+function init() {
     startBody.classList.add('hide')
     quizBody.classList.remove('hide')
-    initialsInp.classList.remove("hide")
     feedback.classList.remove('hide')
 
     Timer();
     startQuestions();
-});
+}
 
 // Display quiz questions
 function startQuestions() {
@@ -55,17 +58,15 @@ function check() {
     }
 
     feedbackEl.setAttribute("class", "feedback");
-    setTimeout(function() {
+    setTimeout(function () {
         feedbackEl.setAttribute("class", "feedback hide");
+        index++;
+        if (index < questions.length) {
+            startQuestions();
+        } else {
+            endGame();
+        }
     }, 1000);
-
-    index++;
-    if (index < questions.length) {
-        startQuestions();
-    } else {
-        endGame();
-        saveHighScores();
-    }
 }
 
 // After all questions have been answered, display "All done!" with "Your final score is: " and input box for initials, with submit button
@@ -79,31 +80,83 @@ function endGame() {
     scoreEl.textContent = timeLeft;
 }
 
-function saveHighScores () {
-    var initials = document.querySelector("#initialsInp".value.trim());
+function saveHighScores() {
+    // var initials = document.querySelector("#initialsInp".value.trim());
+    var initials = initialsInp.value.trim();
 
-    if (initials !== "") {
-        var highscores =
-        JSON.parse(window.localStorage.getItem("#highscores")) || [];
-        console.log(highscores)
-        var newScore = {
-            "score": timeLeft,
-            "initials": initials
-        };
+    if (!initials) return;
 
-        
-            highscores.push(newScore);
-        window.localStorage.setItem ("#highscores", JSON.stringify(highscores));
-        window.location.href = "HighScores.html";
-        
-    }
+    var newScore = {
+        "score": timeLeft,
+        "initials": initials
+    };
+
+    highscoreArr.push(newScore);
+    setScores();
+
+    location.href = "HighScores.html";
 }
 
 // Function to clear the high scores when the "Clear High Scores" button is clicked
-function clearSpan(){
-    document.querySelector("#highscores").innerHTML=""
+function clearSpan() {
+    highscores.innerHTML = ""
 }
 
-clearHighScores.addEventListener("click", function() {
-    clearSpan();
-})
+
+// $.ajax({
+//     method: "GET",
+//     url: "http:somthing"
+// }).then(function (res) {
+
+// }).catch(function (err) {
+
+// })
+
+// $.get("http:somthing")
+//     .then(function (res) {
+
+//     }).catch(function (err) {
+
+//     })
+
+// axios({
+//     method: "GET",
+//     url: "http:somthing"
+// }).then(function (res) {
+
+// }).catch(function (err) {
+
+// })
+
+// axios.get("http:somthing")
+//     .then(function (res) {
+
+//     }).catch(function (err) {
+
+//     })
+
+// var myvar;
+
+// setTimeout(function () {
+//     myvar = "hello"
+// }, 20)
+
+// console.log(myvar)
+
+// function getMsg() {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(function () {
+//             myvar = "hello"
+
+//             resolve("hello")
+//         }, 1000)
+//     })
+// }
+
+// getMsg()
+//     .then(function (msg) {
+//         console.log(msg)
+//     })
+//     .catch(function (err) {
+//         console.log(err)
+//     })
