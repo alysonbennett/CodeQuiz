@@ -1,8 +1,19 @@
-## Code Quiz Homework
+## Code Quiz
 
 Alyson Bennett
 
-## Code Quiz Homework Objectives
+## Link to Deployed Application
+
+[Link](https://alysonbennett.github.io/CodeQuiz/)
+
+## Technologies Used
+
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+
+## Code Quiz Objectives
 
 The goal of this homework assignment was to create a timed quiz with basic questions about JavaScript. When the user clicks the "Start Quiz" button, they are immediately shown the first question with four multiple choice answers.
 
