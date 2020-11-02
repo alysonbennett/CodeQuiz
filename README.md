@@ -18,16 +18,16 @@ To begin this assignment, I pseudo-coded each step of the code. This started wit
 
 ## Screen Shots of Code Quiz
 
-![Landing Page](./ScreenShots/landingPage.png)
+![Landing Page](Assests/ScreenShots/landingPage.png)
 This screen shot shows what the user will see when they first open the website.
 
-![Questions](ScreenShots/questions.png)
+![Questions](Assests/ScreenShots/questions.png)
 This screen shot shows how the questions and choices are displayed after the user presses the "Start Quiz" button.
 
-![All Done Screen](./ScreenShots/allDone.png)
+![All Done Screen](Assests/ScreenShots/allDone.png)
 This screen shot displays what is shown when the quiz is over. 
 
-![All Done with Scores](./ScreenShots/allDoneWithScore.png)
+![All Done with Scores](Assests/ScreenShots/allDoneWithScore.png)
 This screen shot shows what the user sees when they submit their initials to save their high score.
 
 
